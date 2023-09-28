@@ -15,7 +15,7 @@ export default function Home() {
             <h1>Ana Carolina, eu te amo, se você me ama, clique no botão!!</h1>
             <div style={{position: 'relative', width: "100%", height: "100%"}}>
                 <div style={{position: 'absolute', top: position.x, left: position.y, padding: 50, transitionProperty: "top, left",  transitionDuration: "0.3s",  transitionTimingFunction: "ease-out" }} onMouseEnter={changePosition}>
-                    <button onClick={() => setIsClicked(isClicked + 1)}>Butão</button>
+                    <button onClick={() => {setIsClicked(isClicked + 1); changePosition()}}>Butão</button>
                 </div>
             </div>
             { isClicked > 10 ? <h1>Nos amamos muitão!! ♥</h1> : ''}
